@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-proxy" />
+        <module name="spring-boot-Thread" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="boot2021" target="1.8" />
+      <module name="spring-boot-proxy" target="1.8" />
+      <module name="spring-boot-Thread" target="1.8" />
+      <module name="spring-boot-transactional" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

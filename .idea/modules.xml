@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/boot2021.iml" filepath="$PROJECT_DIR$/.idea/boot2021.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-Thread/spring-boot-Thread.iml" filepath="$PROJECT_DIR$/spring-boot-Thread/spring-boot-Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-proxy/spring-boot-proxy.iml" filepath="$PROJECT_DIR$/spring-boot-proxy/spring-boot-proxy.iml" />
+    </modules>
+  </component>
+</project>
