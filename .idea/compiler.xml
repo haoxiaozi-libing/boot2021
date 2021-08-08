@@ -11,6 +11,9 @@
         <module name="model" />
         <module name="service_user" />
         <module name="service_util" />
+        <module name="spring-boot-data" />
+        <module name="spring-boot-proxy" />
+        <module name="spring-boot-Thread" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">

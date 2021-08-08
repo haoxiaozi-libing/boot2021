@@ -10,13 +10,14 @@
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/model/pom.xml" />
         <option value="$PROJECT_DIR$/service/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-data/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-Thread/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common/common.utils/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-Thread/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-transactional/pom.xml" />
       </set>
     </option>
