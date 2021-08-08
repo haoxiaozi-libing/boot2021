@@ -34,7 +34,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!--swagger-->
+        <!--整合swagger
+        先在pom文件中引入依赖，
+        然后配置swagger的config
+       主启动类上加上扫描规则
+
+        -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

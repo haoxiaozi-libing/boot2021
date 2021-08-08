@@ -2,13 +2,12 @@ package com.libing.controller;
 
 import com.libing.mapper.HospitalSetMapper;
 import com.libing.service.HospitalSetService;
+import com.libing.yygh.common.result.Result;
 import com.libing.yygh.model.hosp.HospitalSet;
 import jdk.nashorn.internal.objects.annotations.Getter;
+import org.bouncycastle.est.ESTSourceConnectionListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,9 +24,21 @@ public class HospSetApi {
     private HospitalSetService hospitalSetService;
 
     @GetMapping("/all")
-    public List<HospitalSet> getAll(){
+    public Result<List<HospitalSet>> getAll(){
         List<HospitalSet> list = hospitalSetService.list();
-        return list;
+        Result<List<HospitalSet>> ok = Result.ok(list);
+        return ok;
     }
+    @DeleteMapping("{id}")
+    public Result deleteById(@PathVariable("id") int id){
+        boolean b = hospitalSetService.removeById(id);
+        if(b){
+            return Result.ok();
+        }else {
+            return Result.fail();
+        }
+
+    }
+
 
 }
