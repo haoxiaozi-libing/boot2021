@@ -21,7 +21,6 @@ public class lockConn {
         new Thread(() -> {
             try {
                 for (int i = 0; i < 10; i++) {
-
                     share.decr();
                 }
             } catch (InterruptedException e) {
