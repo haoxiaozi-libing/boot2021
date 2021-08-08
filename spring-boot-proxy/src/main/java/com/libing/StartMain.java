@@ -16,7 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class StartMain {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(StartMain.class, args);
-        MyMathCatalator bean = run.getBean(MyMathCatalator.class);
-        int add = bean.add(1, 2);
+//        MyMathCatalator bean = run.getBean(MyMathCatalator.class);
+//        int add = bean.add(1, 2);
     }
 }
