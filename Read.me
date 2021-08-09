@@ -1,0 +1,7 @@
+8月8号
+    1. mapper接口扫描，继承BascMapper，同时加入spring
+        扫描@MapperScan("com.libing.mapper")，
+    2. IService接口：里面有很多的方法，自己写的接口service继承他：
+        public interface HospitalSetService extends IService<HospitalSet>
+    3. ServiceImpl：IService接口的实现类，自己的实现类继承ServiceImpl，实现自己写的接口
+    4. QueryWrapper里面很多查询和封装
