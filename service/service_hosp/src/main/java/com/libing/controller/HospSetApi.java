@@ -2,7 +2,6 @@ package com.libing.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.libing.mapper.HospitalSetMapper;
 import com.libing.service.HospitalSetService;
 import com.libing.yygh.common.result.Result;
 import com.libing.yygh.common.utils.MD5;
@@ -13,7 +12,6 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.util.locale.provider.FallbackLocaleProviderAdapter;
 
 import java.util.List;
 import java.util.Random;
@@ -22,8 +20,10 @@ import java.util.Random;
  * @author lvlibing
  * @create 2021-08-08 14:45
  */
+
 @RestController
-@RequestMapping(value = "admin/hosp/hospitalSet")
+@RequestMapping(value = "/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospSetApi {
 
     //注入service
@@ -50,11 +50,9 @@ public class HospSetApi {
     }
 
     // 条件查询带分页功能
-    @PostMapping("findPageHospSet/{current}/{limit}")
+    @PostMapping("/findPageHospSet/{current}/{limit}")
     public Result page(@PathVariable("current") Long current, @PathVariable("limit") Long limint, @RequestBody(required = false) HospitalQueryVo vo) {
-
         Page<HospitalSet> page = new Page<>(current, limint);
-
         QueryWrapper<HospitalSet> queryWrapper = new QueryWrapper();
         String hosname = vo.getHosname();
         String hoscode = vo.getHoscode();
