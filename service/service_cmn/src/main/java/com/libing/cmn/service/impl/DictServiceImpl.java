@@ -8,8 +8,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.libing.yygh.model.cmn.Dict;
 import com.libing.yygh.vo.cmn.DictEeVo;
+import org.apache.xmlbeans.impl.xb.ltgfmt.TestsDocument;
 import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +23,10 @@ import java.util.List;
 
 @Service
 public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements DictService {
+
+
     @Override
+    @Cacheable(value = "dict",keyGenerator = "keyGenerator")
     public List<Dict> findChlidData(Long id) {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("parent_id", id);
@@ -69,11 +74,11 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
     }
 
     @Override
+    @CacheEvict(value ="dict",allEntries = true)
     public void importDictData(MultipartFile file) {
         try {
             EasyExcel.read(file.getInputStream(), DictEeVo.class, new DictListener(baseMapper)).sheet().doRead();
         } catch (IOException e) {
-
 
         }
 

@@ -12,6 +12,10 @@
         <module>common</module>
         <module>service</module>
         <module>model</module>
+        <module>spring-boot-mongodb</module>
+        <module>spring-boot-redis</module>
+        <module>xiao_mu_biao_30w</module>
+        <module>common-mapper</module>
     </modules>
 
     <properties>
