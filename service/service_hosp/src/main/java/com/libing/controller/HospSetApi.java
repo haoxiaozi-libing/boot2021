@@ -4,13 +4,15 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.libing.service.HospitalSetService;
 import com.libing.yygh.common.result.Result;
-import com.libing.yygh.common.utils.MD5;
 import com.libing.yygh.model.hosp.HospitalSet;
+import com.libing.yygh.utils.MD5;
 import com.libing.yygh.vo.hosp.HospitalQueryVo;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.commons.lang3.StringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.Random;
  * @create 2021-08-08 14:45
  */
 
+@Api("医院设置接口")
 @RestController
 @RequestMapping(value = "/admin/hosp/hospitalSet")
 @CrossOrigin
@@ -103,7 +106,7 @@ public class HospSetApi {
     @PostMapping("updateHospitalSet")
     public Result updateHospitalSet(@RequestBody HospitalSet hospitalSet) {
         boolean flag = hospitalSetService.updateById(hospitalSet);
-        if(flag) {
+        if (flag) {
             return Result.ok();
         } else {
             return Result.fail();
@@ -113,8 +116,12 @@ public class HospSetApi {
     //7 批量删除医院设置
     @DeleteMapping("batchRemove")
     public Result batchRemoveHospitalSet(@RequestBody List<Long> idList) {
-        hospitalSetService.removeByIds(idList);
-        return Result.ok();
+        boolean b = hospitalSetService.removeByIds(idList);
+        if (b) {
+            return Result.ok();
+        } else {
+            return Result.fail();
+        }
     }
 
     //8 医院设置锁定和解锁

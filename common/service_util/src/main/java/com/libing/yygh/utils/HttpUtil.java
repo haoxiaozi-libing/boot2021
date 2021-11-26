@@ -1,4 +1,4 @@
-package com.libing.yygh.common.utils;
+package com.libing.yygh.utils;
 
 import lombok.extern.slf4j.Slf4j;
 

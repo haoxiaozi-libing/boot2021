@@ -19,7 +19,7 @@ public class MyScheduled {
     @Scheduled(cron = "0/15 * * * * ?")
     private void sche(){
         System.out.println("定时任务。。。。。。");
-        List
+//        List
     }
 
 

@@ -1,4 +1,4 @@
-package com.libing.yygh.common.utils;
+package com.libing.yygh.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

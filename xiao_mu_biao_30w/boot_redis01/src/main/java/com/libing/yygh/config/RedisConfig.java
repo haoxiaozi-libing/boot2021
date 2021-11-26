@@ -1,4 +1,4 @@
-package com.libing.config;
+package com.libing.yygh.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

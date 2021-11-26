@@ -1,4 +1,4 @@
-package com.libing.yygh.common.config;
+package com.libing.yygh.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -26,7 +26,6 @@ public class RedisConfig {
 
     /**
      * 自定义key规则
-     *
      * @return
      */
     @Bean
@@ -36,6 +35,7 @@ public class RedisConfig {
             public Object generate(Object target, Method method, Object... params) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(target.getClass().getName());
+                sb.append("_");
                 sb.append(method.getName());
                 for (Object obj : params) {
                     sb.append(obj.toString());
@@ -47,7 +47,6 @@ public class RedisConfig {
 
     /**
      * 设置RedisTemplate规则
-     *
      * @param redisConnectionFactory
      * @return
      */
@@ -77,7 +76,6 @@ public class RedisConfig {
 
     /**
      * 设置CacheManager缓存规则
-     *
      * @param factory
      * @return
      */
@@ -104,4 +102,5 @@ public class RedisConfig {
                 .build();
         return cacheManager;
     }
+
 }

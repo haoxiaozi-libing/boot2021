@@ -1,4 +1,4 @@
-package com.libing.yygh.common.config;
+package com.libing.yygh.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
@@ -50,17 +50,17 @@ public class Swagger2Config {
                 .title("网站-API文档")
                 .description("本文档描述了网站微服务接口定义")
                 .version("1.0")
-                .contact(new Contact("libing", "http://libing.com", "493211102@qq.com"))
+                .contact(new Contact("atguigu", "http://atguigu.com", "493211102@qq.com"))
                 .build();
     }
 
     private ApiInfo adminApiInfo(){
 
         return new ApiInfoBuilder()
-                .title("后台管理系统-API文档")
-                .description("本文档描述了后台管理系统微服务接口定义")
+                .title("尚医通项目学习接口文档")
+                .description("老子一定要把它学完，草草草草草草草草草草")
                 .version("1.0")
-                .contact(new Contact("libing", "http://libing.com", "49321112@qq.com"))
+                .contact(new Contact("lvlibing", "http://atguigu.com", "1445935345@qq.com"))
                 .build();
     }
 

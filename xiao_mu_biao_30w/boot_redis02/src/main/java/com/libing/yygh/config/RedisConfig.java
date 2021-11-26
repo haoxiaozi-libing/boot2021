@@ -1,4 +1,4 @@
-package com.libing.config;
+package com.libing.yygh.config;
 
 import org.redisson.Redisson;
 import org.redisson.config.Config;

@@ -1,8 +1,9 @@
-package com.libing.yygh.common.helper;
+package com.libing.yygh.helper;
 
 import com.alibaba.fastjson.JSONObject;
-import com.libing.yygh.common.utils.HttpUtil;
-import com.libing.yygh.common.utils.MD5;
+
+import com.libing.yygh.utils.HttpUtil;
+import com.libing.yygh.utils.MD5;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -35,6 +36,7 @@ public class HttpRequestHelper {
         }
         return resultMap;
     }
+
 
     /**
      * 请求数据获取签名
