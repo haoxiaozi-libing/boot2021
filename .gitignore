@@ -1,1 +1,7 @@
 .idea
+*.class
+*.iml
+*.log
+*.ipr
+target/
+*.war
