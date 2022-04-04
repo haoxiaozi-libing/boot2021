@@ -28,7 +28,7 @@ import java.util.regex.Pattern;
  */
 @RestController
 @RequestMapping("/admin/cmn/dict")
-@CrossOrigin
+//@CrossOrigin
 public class MongoDbApi {
 
     @Autowired

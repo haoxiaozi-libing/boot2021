@@ -15,6 +15,7 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    
 
     <modules>
         <module>common</module>
@@ -24,6 +25,9 @@
         <module>spring-boot-redis</module>
         <module>common-mapper</module>
         <module>service_client</module>
+        <module>service-gateway</module>
+        <module>shang-yi-tong-second-study</module>
+        <module>libing-sharding-sphere</module>
     </modules>
 
     <properties>

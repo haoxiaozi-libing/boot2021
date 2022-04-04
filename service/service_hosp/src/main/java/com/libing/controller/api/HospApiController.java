@@ -19,9 +19,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ *
+ * 用户界面查询调用的类
+ *
+ */
 @RestController
-@RequestMapping("/api/hosp/hospital")
-@CrossOrigin
+@RequestMapping("/api/hosp/hospital/")
+//@CrossOrigin
 public class HospApiController {
 
     @Autowired
@@ -45,7 +51,7 @@ public class HospApiController {
         return Result.ok(hospitals);
     }
 
-    @ApiOperation(value = "根据医院名称查询")
+    @ApiOperation(value = "根据医院名称模糊查询")
     @GetMapping("findByHosName/{hosname}")
     public Result findByHosName(@PathVariable String hosname) {
         List<Hospital> list = hospitalService.findByHosname(hosname);

@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author lvlibing
@@ -21,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/cmn/dict")
-@CrossOrigin
+//@CrossOrigin
 public class CmnApi {
     @Autowired
     RedisTemplate redisTemplate;
@@ -29,11 +31,20 @@ public class CmnApi {
     @Autowired
     private MongoTemplate mongoTemplate;
 
+
     @GetMapping("/redis")
     public void templateRedisMy() {
-        redisTemplate.opsForValue().set("lvlibing", "lvlibing");
-        Object lvlibing = redisTemplate.opsForValue().get("lvlibing");
-        System.out.println(lvlibing);
+        List<Person> people = Arrays.asList(
+                new Person("zhangsan", 14, new Adress("北京1", "北京1", "海淀区1")),
+                new Person("lisi", 142, new Adress("北京2", "北京2", "海淀区2")),
+                new Person("wangwu", 143, new Adress("北京3", "北京3", "海淀区3"))
+        );
+
+
+        redisTemplate.opsForValue().set("lvlibing", people,1, TimeUnit.MINUTES);
+        List<Person> list= (List<Person>)redisTemplate.opsForValue().get("lvlibing");
+
+        System.out.println(list);
     }
 
     @Autowired
@@ -56,6 +67,7 @@ public class CmnApi {
 
     //导出数据字典接口
     @GetMapping("/exportData")
+    @ApiOperation(value = "导出清单", notes = "export", produces = "application/octet-stream")
     public void exportDict(HttpServletResponse response) {
         dictService.exportDictData(response);
     }
@@ -65,14 +77,14 @@ public class CmnApi {
     @GetMapping("getName/{dictCode}/{value}")
     public String getName(@PathVariable String dictCode,
                           @PathVariable String value) {
-        String dictName = dictService.getDictName(dictCode,value);
+        String dictName = dictService.getDictName(dictCode, value);
         return dictName;
     }
 
     //根据value查询
     @GetMapping("getName/{value}")
     public String getName(@PathVariable String value) {
-        String dictName = dictService.getDictName("",value);
+        String dictName = dictService.getDictName("", value);
         return dictName;
     }
 

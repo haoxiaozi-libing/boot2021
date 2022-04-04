@@ -15,13 +15,12 @@
         <module>service_cmn_client</module>
     </modules>
     <dependencies>
+
         <dependency>
             <groupId>com.libing</groupId>
             <artifactId>common_util</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>provided </scope>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>com.libing</groupId>
             <artifactId>model</artifactId>

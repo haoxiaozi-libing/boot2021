@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-mapper/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/common_util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/common_util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/rabbit_util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/rabbit_util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/service_util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/service_util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-manage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libing-sharding-sphere" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-gateway/gate-way" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-gateway/gate-way/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_cmn" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_cmn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_hosp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_hosp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_msm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_msm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_oss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_oss/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service_user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-Thread" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-data" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-proxy" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service_user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_client/service_cmn_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service_client/service_cmn_client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shang-yi-tong-second-study" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shang-yi-tong-second-study/mybatis-gate-way" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shang-yi-tong-second-study/mybatis-gate-way/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shang-yi-tong-second-study/mybatis-plus-crud-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shang-yi-tong-second-study/mybatis-plus-crud-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-mongodb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-mongodb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiao_mu_biao_30w" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiao_mu_biao_30w/boot_redis01" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiao_mu_biao_30w/boot_redis02" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiao_mu_biao_30w/大厂面试" charset="UTF-8" />
   </component>
 </project>

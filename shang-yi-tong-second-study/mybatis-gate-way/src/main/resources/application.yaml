@@ -1,0 +1,18 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: mybatis-gate-way
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: llb-test
+          uri: lb://llb-test
+          predicates:
+            - Path=/*/user/**

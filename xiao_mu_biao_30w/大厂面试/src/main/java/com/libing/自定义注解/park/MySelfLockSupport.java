@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class MySelfLockSupport {
     public static void main(String[] args) {
-        Lock lock = new ReentrantLock();
+        ReentrantLock lock = new ReentrantLock();
         lock.lock();
         Thread a = new Thread(() -> {
             try {

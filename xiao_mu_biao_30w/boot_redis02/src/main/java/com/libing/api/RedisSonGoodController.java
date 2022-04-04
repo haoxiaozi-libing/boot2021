@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -37,6 +38,7 @@ public class RedisSonGoodController {
         String result = stringRedisTemplate.opsForValue().get("goods:001");// get key ====看看库存的数量够不够
         int goodsNumber = result == null ? 0 : Integer.parseInt(result);
         try {
+            new HashMap<>().put("","");
             if (goodsNumber > 0) {
                 Thread.sleep(5000);
                 int realNumber = goodsNumber - 1;

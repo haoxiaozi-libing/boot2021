@@ -7,27 +7,51 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot_redis01" />
+        <module name="boot_redis02" />
+        <module name="common-mapper" />
         <module name="common_util" />
+        <module name="gate-way" />
+        <module name="hospital-manage" />
+        <module name="libing-sharding-sphere" />
         <module name="model" />
+        <module name="mybatis-gate-way" />
+        <module name="mybatis-plus-crud-user" />
+        <module name="rabbit_util" />
+        <module name="service_cmn" />
+        <module name="service_cmn_client" />
+        <module name="service_hosp" />
+        <module name="service_msm" />
+        <module name="service_order" />
+        <module name="service_oss" />
         <module name="service_user" />
         <module name="service_util" />
-        <module name="spring-boot-data" />
-        <module name="spring-boot-proxy" />
-        <module name="spring-boot-Thread" />
+        <module name="spring-boot-mongodb" />
+        <module name="spring-boot-redis" />
+        <module name="大厂面试" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="boot2021" target="1.8" />
-      <module name="common" target="1.8" />
-      <module name="common_util" target="1.8" />
-      <module name="common_utils" target="1.8" />
-      <module name="model" target="1.8" />
-      <module name="service" target="1.8" />
-      <module name="service_user" target="1.8" />
-      <module name="service_util" target="1.8" />
-      <module name="spring-boot-data" target="1.8" />
-      <module name="spring-boot-proxy" target="1.8" />
-      <module name="spring-boot-Thread" target="1.8" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-mapper" options="" />
+      <module name="common_util" options="" />
+      <module name="gate-way" options="" />
+      <module name="hospital-manage" options="" />
+      <module name="model" options="" />
+      <module name="mybatis-gate-way" options="" />
+      <module name="mybatis-plus-crud-user" options="" />
+      <module name="rabbit_util" options="" />
+      <module name="service_cmn" options="" />
+      <module name="service_cmn_client" options="" />
+      <module name="service_hosp" options="" />
+      <module name="service_msm" options="" />
+      <module name="service_order" options="" />
+      <module name="service_oss" options="" />
+      <module name="service_user" options="" />
+      <module name="service_util" options="" />
+      <module name="spring-boot-mongodb" options="" />
+      <module name="spring-boot-redis" options="" />
+    </option>
   </component>
 </project>

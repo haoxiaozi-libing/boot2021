@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.libing.yygh.model.cmn.Dict;
 import com.libing.yygh.vo.cmn.DictEeVo;
+import io.swagger.annotations.ApiOperation;
 import org.apache.xmlbeans.impl.xb.ltgfmt.TestsDocument;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,8 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
      * 使用outPut
      */
 
+
+    @ApiOperation(value = "导出清单", notes = "export", produces = "application/octet-stream")
     @Override
     public List<Dict> exportDictData(HttpServletResponse response) {
         response.setContentType("application/vnd.ms-excel");
@@ -70,7 +73,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             lists.add(dictEeVo);
         }
         try {
-            EasyExcel.write(response.getOutputStream(), DictEeVo.class).sheet("dict").doFill(lists);
+            EasyExcel.write(response.getOutputStream(), DictEeVo.class).sheet("dict").doWrite(lists);
 
         } catch (IOException e) {
 
@@ -83,6 +86,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
     public void importDictData(MultipartFile file) {
         try {
             EasyExcel.read(file.getInputStream(), DictEeVo.class, new DictListener(baseMapper)).sheet().doRead();
+            EasyExcel.read(file.getInputStream(),DictEeVo.class,new DictListener(baseMapper)).sheet().doRead();
         } catch (IOException e) {
 
         }
